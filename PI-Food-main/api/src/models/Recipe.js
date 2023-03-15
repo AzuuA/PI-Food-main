@@ -11,7 +11,7 @@ module.exports = (sequelize) => {
       primaryKey: true
     },
 
-    name: {
+    title: {
       type: DataTypes.STRING(80),
       allowNull: false, // require *
       validate: {        
