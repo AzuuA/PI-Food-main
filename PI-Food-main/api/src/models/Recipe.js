@@ -12,16 +12,16 @@ module.exports = (sequelize) => {
     },
 
     title: {
-      type: DataTypes.STRING(80),
-      allowNull: false, // require *
+      type: DataTypes.STRING,
+      allowNull: false,
       validate: {        
-        len: [6, 150]
+        len: [4, 150]
       } 
     },
 
     image: {
       type: DataTypes.STRING,
-      defaultValue: "https://i.postimg.cc/t4F6nM5b/324.png",
+      defaultValue: "https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg",
       validate: {isUrl: true}
     },
 
@@ -39,6 +39,9 @@ module.exports = (sequelize) => {
 
     steps: {
       type: DataTypes.ARRAY(DataTypes.TEXT)
+    },
+    diet:{
+      type: DataTypes.STRING
     }
   },
   { timestamps: false }
