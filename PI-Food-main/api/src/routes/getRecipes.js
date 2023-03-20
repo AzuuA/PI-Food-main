@@ -3,5 +3,6 @@ const {getRecipesHandler,getRecipesIdHandler}=require("../handlers/getRecipeHand
 const getRecipesRoute = Router();
 
 getRecipesRoute.get("/name",getRecipesHandler);
-//getRecipesRoute.get("/:idRecipe",getRecipesIdHandler);
+getRecipesRoute.get("/:id",getRecipesIdHandler);
+
 module.exports=getRecipesRoute
