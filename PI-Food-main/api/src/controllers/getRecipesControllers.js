@@ -31,7 +31,7 @@ const getAll = async()=>{
             healthscore: recipe.healthScore,
             image: recipe.image,
             steps: recipe.analyzedInstructions?.[0]?.steps?.map((step) => step.step),
-            /*El mapeo toma cada objeto "step" del arreglo y devuelve su propiedad "step", que es un texto que describe cada paso de la receta. Al final, devuelve un arreglo con todos los textos de los pasos de la receta en el primer conjunto de instrucciones analizadas*/
+            /*El mapeo toma cada objeto "step" del arreglo y devuelve su propiedad "step", que  describe cada paso de la receta. Al final, devuelve un arreglo con todos los pasos de la receta */
             TypeDiets: recipe.diets,
             created: false
           };
