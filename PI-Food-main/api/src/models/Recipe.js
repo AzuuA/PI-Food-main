@@ -25,21 +25,24 @@ module.exports = (sequelize) => {
       validate: {isUrl: true}
     },
 
-    summary: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    },
-
-    healthScore: {
+    healthscore: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 0,
       validate: {min: 0, max: 100}
     },
-
+    summary: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
     steps: {
       type: DataTypes.ARRAY(DataTypes.STRING)
+    },
+    created: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
     }
+    
     
   },
   { timestamps: false }
