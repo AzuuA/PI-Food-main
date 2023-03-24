@@ -6,6 +6,7 @@ const { Recipe, TypeDiet } = require("../db");
 postRecipeRoute.post("/", async(req,res) => {
     let{ title, summary, healthscore, steps,diets, image} = req.body
     try {
+        if(!title||!steps||!diets||!summary) throw Error ('Missing Data')
         let recipeCreated = await Recipe.create({
             title,
             summary,

@@ -36,7 +36,9 @@ module.exports = (sequelize) => {
       allowNull: false
     },
     steps: {
-      type: DataTypes.ARRAY(DataTypes.STRING)
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: false
+
     },
     created: {
       type: DataTypes.BOOLEAN,
