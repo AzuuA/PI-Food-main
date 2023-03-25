@@ -33,7 +33,7 @@ getDietRoute.get('/', async (req, res) => {
           const updatedDiets = await TypeDiet.findAll();
           return res.json(updatedDiets);
         }
-        
+         
         return res.json(diets);
         } catch (error) {
         console.error(error);

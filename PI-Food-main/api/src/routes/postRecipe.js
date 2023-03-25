@@ -16,10 +16,12 @@ postRecipeRoute.post("/", async(req,res) => {
             
         });
         
-        const typediet = await TypeDiet.findAll({
-            where: {name: diets}
-        });
-        await recipeCreated.addTypeDiet(typediet)
+        for(let i = 0; i < diets.length; i++){
+            const typediet = await TypeDiet.findOne({
+                where: {name: diets[i]}
+            });
+            await recipeCreated.addTypeDiet(typediet)
+        }
         res.status(200).send(recipeCreated)
     } catch (error) {
         res.status(404).send({ error: error.message })
